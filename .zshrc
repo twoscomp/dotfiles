@@ -11,7 +11,7 @@
 ZSH_THEME="bira"
 
 # Set colors in 'ls'
-eval `dircolors ~/dircolors-solarized/dircolors.256dark`
+eval `dircolors ~/.dircolors-solarized/dircolors.256dark`
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
