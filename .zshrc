@@ -1,8 +1,15 @@
+# OS
+system_type=$(uname -s)
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/linonmail/.oh-my-zsh"
+if [ "$system_type" = "Linux" ]; then
+	export ZSH="/home/dlin/.oh-my-zsh"
+else
+	export ZSH="/home/linonmail/.oh-my-zsh"
+fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -99,13 +106,6 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Add asdf manager to PATH
-echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
-echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
-
 . $HOME/.asdf/asdf.sh
-
 . $HOME/.asdf/completions/asdf.bash
 
-. $HOME/.asdf/asdf.sh
-
-. $HOME/.asdf/completions/asdf.bash
