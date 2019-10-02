@@ -7,6 +7,12 @@ Plug 'scrooloose/nerdtree'
 " Elixir Support
 Plug 'elixir-editors/vim-elixir'
 
+" Golang Support
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" Typescript Support
+Plug 'leafgarland/typescript-vim'
+
 call plug#end()
 
 " Toggle File Explorer

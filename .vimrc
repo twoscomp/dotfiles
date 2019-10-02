@@ -5,7 +5,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.vim/plugged')
+" Sensible Defaults
+Plug 'tpope/vim-sensible'
 
 " File Explorer
 Plug 'scrooloose/nerdtree'
@@ -23,8 +25,4 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Ignore case during search
 set ic
-" Highlight search results
-set hls
-" Incremental search
-set is
 
