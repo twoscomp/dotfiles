@@ -3,7 +3,6 @@ system_type=$(uname -s)
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 if [ "$system_type" = "Linux" ]; then
 	export ZSH="/home/dlin/.oh-my-zsh"
@@ -74,15 +73,10 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew brew-cask git-extras osx sublime z zsh-syntax-highlighting)
+plugins=(git git-extras z)
 
 # User configuration
-
-export PATH="/Users/danilin/twitch/oncall:/Users/danilin/Library/Flex/flex_sdk_4/bin:/Users/danilin/.rbenv/shims:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/danilin/.rvm/bin:/usr/X11/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
-source $HOME/.oh-my-zsh/custom/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -106,14 +100,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# GOPATH
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/twitch/go
-export PATH=$PATH:$GOPATH/bin
-
-
 # Setup ASDF
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
-
 export PATH=$HOME/.toolbox/bin:$PATH
