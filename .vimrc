@@ -18,10 +18,20 @@ Plug 'elixir-editors/vim-elixir'
 " Golang Support
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" Typescript Support
+Plug 'leafgarland/typescript-vim'
+
+" Typescript React Support
+Plug 'peitalin/vim-jsx-typescript'
+
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
 call plug#end()
 
 " Toggle File Explorer
 map <C-n> :NERDTreeToggle<CR>
+" Open NerdTree to current file
+nnoremap <silent> <C-v> :NERDTreeFind<CR>
 
 " Ignore case during search
 set ic
