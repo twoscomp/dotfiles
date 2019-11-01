@@ -1,5 +1,5 @@
 # OS
-system_type=$(uname -s)
+system_type=$(uname -a | awk '{ print $1, $2 }')
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -100,7 +100,16 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Setup Golang
+if [ "$system_type" = "Linux" ]; then
+export GOPATH=/home/linonmail/.asdf/installs/golang/1.13.1/packages
+fi
+
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+
 # Setup ASDF
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 export PATH=$HOME/.toolbox/bin:$PATH
+
