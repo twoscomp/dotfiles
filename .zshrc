@@ -7,7 +7,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="mh"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -101,4 +101,7 @@ export PATH=$PATH:$GOBIN
 
 # Add Amazon BuilderTools to Path
 export PATH=$HOME/.toolbox/bin:$PATH
+
+# Use vim built from github
+alias vim=$HOME/bin/vim
 
