@@ -1,16 +1,7 @@
-# OS
-system_type=$(uname -a | awk '{ print $1, $2 }')
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
-if [ "$system_type" = "Linux" ]; then
-	export ZSH="/home/dlin/.oh-my-zsh"
-elif [ "$system_type" = "Darwin" ]; then
-	export ZSH="/Users/danilin/.oh-my-zsh"
-else
-	export ZSH="/home/linonmail/.oh-my-zsh"
-fi
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -18,12 +9,11 @@ fi
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-#ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME="robbyrussell"
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -54,7 +44,7 @@ ZSH_THEME="robbyrussell"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -82,11 +72,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -101,15 +91,14 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Setup Golang
-if [ "$system_type" = "Linux" ]; then
-export GOPATH=/home/linonmail/.asdf/installs/golang/1.13.1/packages
-fi
-
+export GOPATH=$HOME/.asdf/installs/golang/1.13.1/packages
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
 # Setup ASDF
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+# Add Amazon BuilderTools to Path
 export PATH=$HOME/.toolbox/bin:$PATH
 
