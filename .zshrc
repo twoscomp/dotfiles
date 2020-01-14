@@ -91,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Setup Golang
-export GOPATH=$HOME/.asdf/installs/golang/1.13.1/packages
+export GOPATH=$HOME/.asdf/installs/golang/1.13.6/packages
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
