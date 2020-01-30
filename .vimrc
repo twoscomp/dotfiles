@@ -43,9 +43,6 @@ nnoremap <silent> <C-v> :NERDTreeFind<CR>
 " Ignore case during search
 set ic
 
-" Always use UTF-8 encoding
-set encoding=UTF-8
-
 " Import configuration for govim
 source ~/.govim.vimrc
 

@@ -66,3 +66,7 @@ if has("patch-8.1.1904")
   set completeopt+=popup
   set completepopup=align:menu,border:off,highlight:Pmenu
 endif
+
+" Fix ^G characters showing up in NERDTree
+" (https://github.com/preservim/nerdtree/pull/963/files)
+let g:NERDTreeNodeDelimiter = "\u00b7"
