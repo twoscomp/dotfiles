@@ -11,6 +11,7 @@ Plug 'tpope/vim-sensible'
 
 " File Explorer
 Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 
 " Elixir Support
 Plug 'elixir-editors/vim-elixir'
@@ -27,6 +28,11 @@ Plug 'peitalin/vim-jsx-typescript'
 
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
+" Markdown Support
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
 call plug#end()
 
 " Toggle File Explorer
@@ -36,6 +42,9 @@ nnoremap <silent> <C-v> :NERDTreeFind<CR>
 
 " Ignore case during search
 set ic
+
+" Always use UTF-8 encoding
+set encoding=UTF-8
 
 " Import configuration for govim
 source ~/.govim.vimrc
