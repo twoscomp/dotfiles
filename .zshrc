@@ -105,3 +105,5 @@ export PATH=$HOME/.toolbox/bin:$PATH
 # Use vim built from github
 alias vim=$HOME/bin/vim
 
+# Twitch
+export PROXY_LDAP_USERNAME=dlin
