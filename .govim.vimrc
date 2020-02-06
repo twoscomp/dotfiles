@@ -47,8 +47,9 @@ set signcolumn=yes
 " syntax on
 "
 " will suffice, no autocmd required.
-autocmd! BufEnter,BufNewFile *.go syntax on
-autocmd! BufLeave *.go syntax off
+"autocmd! BufEnter,BufNewFile *.go syntax on
+"autocmd! BufLeave *.go syntax off
+syntax on
 
 " Suggestion: turn on auto-indenting. If you want closing parentheses, braces
 " etc to be added, https://github.com/jiangmiao/auto-pairs. In future we might
