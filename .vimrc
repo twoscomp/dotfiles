@@ -17,8 +17,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'elixir-editors/vim-elixir'
 
 " Golang Support
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'govim/govim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'govim/govim'
 
 " Typescript Support
 Plug 'leafgarland/typescript-vim'
@@ -44,5 +44,5 @@ nnoremap <silent> <C-v> :NERDTreeFind<CR>
 set ic
 
 " Import configuration for govim
-source ~/.govim.vimrc
+" source ~/.govim.vimrc
 
