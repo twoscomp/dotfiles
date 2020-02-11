@@ -70,4 +70,4 @@ endif
 
 " Fix ^G characters showing up in NERDTree
 " (https://github.com/preservim/nerdtree/pull/963/files)
-let g:NERDTreeNodeDelimiter = "\u00b7"
+" let g:NERDTreeNodeDelimiter = "\u00b7"

@@ -43,6 +43,6 @@ nnoremap <silent> <C-v> :NERDTreeFind<CR>
 " Ignore case during search
 set ic
 
-" Import configuration for govim
-" source ~/.govim.vimrc
+" Import configuration for govim (there's also just some good settings there)
+source ~/.govim.vimrc
 
