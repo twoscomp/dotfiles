@@ -44,5 +44,7 @@ nnoremap <silent> <C-v> :NERDTreeFind<CR>
 set ic
 
 " Import configuration for govim (there's also just some good settings there)
-source ~/.govim.vimrc
+source ~/.vimrc.vimrc
 
+" Enable UTF-8 Encoding for Devicons
+set encoding=UTF-8
