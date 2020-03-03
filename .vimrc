@@ -20,6 +20,12 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'govim/govim'
 
+" Add Snippet Support 
+" Plug 'SirVer/ultisnips'
+
+" Add fuzzy searcher
+Plug 'ctrlpvim/ctrlp.vim'
+
 " Typescript Support
 Plug 'leafgarland/typescript-vim'
 
