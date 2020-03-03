@@ -33,6 +33,9 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
+" Auto insert brackets, parens, quote pairs
+Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
 
 " Toggle File Explorer
@@ -43,8 +46,40 @@ nnoremap <silent> <C-v> :NERDTreeFind<CR>
 " Ignore case during search
 set ic
 
-" Import configuration for govim (there's also just some good settings there)
-source ~/.vimrc.vimrc
-
 " Enable UTF-8 Encoding for Devicons
 set encoding=UTF-8
+
+" Some sensible defaults
+set nocompatible
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Turn on auto-indenting
+set autoindent
+set smartindent
+filetype indent on
+
+" Turn on syntax highlighting
+syntax on
+
+" Suggestion: define sensible backspace behaviour. See :help backspace for
+" more details
+set backspace=2
+
+" Suggestion: Turn on the sign column so you can see error marks on lines
+" where there are quickfix errors. Some users who already show line number
+" might prefer to instead have the signs shown in the number column; in which
+" case set signcolumn=number
+set signcolumn=number
+
+" Enable plugins to enable their own settings and mappings
+filetype plugin on
+
+" Enable mouse integration
+" With this setting, use 'shift' modifier to copy/paste text in and out of vim
+set mouse=a
+
+" Import configuration for govim (there's also just some good settings there)
+source ~/.vimgo.vimrc
+
