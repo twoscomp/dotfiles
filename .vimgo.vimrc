@@ -1,13 +1,14 @@
 " Run 'go-metalinter' on save
-let g:go_metalinter_autosave = 1 " Use goimports for formating
+let g:go_metalinter_autosave = 0
+" Use goimports for formating
 let g:go_fmt_command = "goimports"
 
 " Save on Build
 set autowrite
 
 " Make using quickfix easier
-map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
+map <leader>n :cnext<CR>
+map <leader>m :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
 
 " Add shortcuts for building and runing go
