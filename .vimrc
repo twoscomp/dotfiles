@@ -42,6 +42,12 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 " Auto insert brackets, parens, quote pairs
 Plug 'jiangmiao/auto-pairs'
 
+" Deus Color Scheme
+Plug 'ajmwagar/vim-deus'
+
+" Dracula Color Scheme
+Plug 'dracula/vim', { 'as': 'dracula'  }
+
 call plug#end()
 
 " Toggle File Explorer
@@ -89,3 +95,5 @@ set mouse=a
 " Import configuration for govim (there's also just some good settings there)
 source ~/.vimgo.vimrc
 
+" Set colorscheme
+colorscheme dracula
