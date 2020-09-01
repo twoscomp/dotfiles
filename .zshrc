@@ -107,3 +107,6 @@ alias vim=$HOME/bin/vim
 
 # Twitch
 export PROXY_LDAP_USERNAME=dlin
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export SAM_ASSUME_ACCOUNT_ID="952025780714" 
+export SAM_ISENGARD_ROLE_NAME="Admin"
