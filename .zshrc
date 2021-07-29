@@ -90,31 +90,26 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Setup Golang
-#export GOPATH=$HOME/.asdf/installs/golang/1.15.2/packages
-#export GOBIN=$GOPATH/bin
-#export PATH=$PATH:$GOBIN
-
 # Setup ASDF
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
-# Add Amazon BuilderTools to Path
-export PATH=$HOME/.toolbox/bin:$PATH
-
 # Use vim built from github
 alias vim=$HOME/bin/vim
 
-# Twitch
-export PROXY_LDAP_USERNAME=dlin
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export SAM_ASSUME_ACCOUNT_ID="952025780714" 
-export SAM_ISENGARD_ROLE_NAME="Admin"
-
-# Windows Homebrew
-export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
-export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
-export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
-export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
-export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
-export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
+system_type=$(uname -s)
+if [ $system_type = "Darwin" ]; then # Twitch OSX
+	# Add Amazon BuilderTools to Path
+	export PATH=$HOME/.toolbox/bin:$PATH
+	export PROXY_LDAP_USERNAME=dlin
+	export PATH="/usr/local/opt/ruby/bin:$PATH"
+	export SAM_ASSUME_ACCOUNT_ID="952025780714" 
+	export SAM_ISENGARD_ROLE_NAME="Admin"
+else # Probably WSL Linux
+	export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
+	export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
+	export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
+	export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
+	export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
+	export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
+fi
