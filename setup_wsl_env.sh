@@ -28,3 +28,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "Done."
 
+echo "Cloning VIM..."
+cd ~
+git clone https://github.com/vim/vim.git
+echo "Done."
