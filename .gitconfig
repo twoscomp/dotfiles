@@ -2,4 +2,9 @@
 	email = linonmail@gmail.com
 	name = Daniel Lin
 [core]
-	editor = vim
+	editor = nvim
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

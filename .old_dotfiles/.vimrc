@@ -97,3 +97,8 @@ source ~/.vimgo.vimrc
 
 " Set colorscheme
 colorscheme dracula
+
+" Disable Error Bell in Goland
+set visualbell
+" Disable Error Bell in regular terminal
+set noerrorbells
