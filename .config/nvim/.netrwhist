@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/dlin/.config/nvim'
+let g:netrw_dirhist_0='/home/dlin'
+let g:netrw_dirhist_9='/mnt/d/mods/www/cgi-bin'
+let g:netrw_dirhist_8='/mnt/d/mods/www'
+let g:netrw_dirhist_7='/mnt/d/mods'
+let g:netrw_dirhist_6='/mnt/d'
+let g:netrw_dirhist_5='/mnt/d/mods/www/cgi-bin'
+let g:netrw_dirhist_4='/mnt/d/mods/www'
+let g:netrw_dirhist_3='/mnt/d/mods'
+let g:netrw_dirhist_2='/mnt/d'
